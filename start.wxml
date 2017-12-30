@@ -1,0 +1,38 @@
+<!--start.wxml-->
+
+<!-- <button class="btn1" bindtap="getDataFromOneNet">
+查询当前湿度</button> -->
+
+<button class="btn2" bindtap="getDataFromOneNet">
+查询当前湿度</button>
+
+
+
+<button class="btn3" bindtap="getDataFromAlarm">
+设置闹钟</button>
+<text id="text1"> </text>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label style="display: flex"  wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+ <input id="input" placeholder= "输入衣服湿度..."
+placeholder-style="font-size:15px; color:#bfbfbf;" 
+style="font-weight:bolder; font-size:15px; color:#000000; padding-left: 30rpx"
+  bindinput="change"/> 
+
+
+
+<text id="text">请输入1～5表示衣服目前干湿程度</text>
+<text id="text1">1：一点点潮湿</text>
+<text id="text2">3：甩干了</text>
+<text id="text3">5：湿答答</text>
+<text id="text4">预测晾的衣服要多久能干（testing...）</text>
+
+ <button id="btn3" style="opacity: {{opacity}}" 
+disabled="{{disabled}}" bindtap="send">预测</button>
+
+<button id="btn4" style="opacity: {{opacity}}" 
+disabled="{{disabled}}" bindtap="back">询问建议</button> 
