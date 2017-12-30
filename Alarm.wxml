@@ -1,0 +1,4 @@
+<!--pages/Alarm/Alarm.wxml-->
+<text id="text">在这里你可以设置闹钟</text>
+<text id="text1">但是很遗憾，这个功能我们还没有做好。</text>
+
